@@ -20,7 +20,7 @@ export default function Home({ darkMode }) {
         Hi, I'm <span className="text-blue-500">Santhoshi</span>
       </motion.h1>
 
-      {/* Subheading */}
+      {/* Role */}
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,9 +45,10 @@ export default function Home({ darkMode }) {
             : "text-gray-600 max-w-2xl mb-8"
         }
       >
-        I build modern, responsive and scalable web applications using
-        React.js, Tailwind CSS and REST APIs. Passionate about clean UI,
-        performance optimization and user-focused design.
+        I build responsive and user-friendly web applications using
+        React.js, JavaScript, and Tailwind CSS. I enjoy creating clean
+        UI designs and improving user experience through modern web
+        technologies.
       </motion.p>
 
       {/* Tech Stack */}
@@ -58,8 +59,8 @@ export default function Home({ darkMode }) {
               key={index}
               className={
                 darkMode
-                  ? "bg-gray-800 text-white px-4 py-2 rounded-full text-sm transition"
-                  : "bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm transition"
+                  ? "bg-gray-800 text-white px-4 py-2 rounded-full text-sm"
+                  : "bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm"
               }
             >
               {tech}
@@ -70,11 +71,11 @@ export default function Home({ darkMode }) {
 
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 justify-center">
-        
-        {/* View Projects */}
+
+        {/* Projects */}
         <Link
           to="/projects"
-          className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-blue-500/30 text-white"
+          className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white transition duration-300"
         >
           View Projects
         </Link>
@@ -87,7 +88,21 @@ export default function Home({ darkMode }) {
           Contact Me
         </Link>
 
-        {/* Download Resume */}
+        {/* GitHub */}
+        <a
+          href="https://github.com/Santhoshipuru"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={
+            darkMode
+              ? "border border-gray-600 text-gray-300 hover:bg-gray-800 px-6 py-3 rounded-lg transition duration-300"
+              : "border border-gray-400 text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-lg transition duration-300"
+          }
+        >
+          GitHub
+        </a>
+
+        {/* Resume */}
         <a
           href="/Santhoshi_Resume.pdf"
           download
