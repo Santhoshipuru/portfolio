@@ -104,16 +104,18 @@ export default function Home({ darkMode }) {
 
         {/* Resume */}
         <a
-          href="/Santhoshi_Resume.pdf"
-          download
-          className={
-            darkMode
-              ? "border border-gray-600 text-gray-300 hover:bg-gray-800 px-6 py-3 rounded-lg transition duration-300"
-              : "border border-gray-400 text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-lg transition duration-300"
-          }
-        >
-          Download Resume
-        </a>
+  href="/Santhoshi_Puru.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  download
+  className={
+    darkMode
+      ? "border border-gray-600 text-gray-300 hover:bg-gray-800 px-6 py-3 rounded-lg transition duration-300"
+      : "border border-gray-400 text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-lg transition duration-300"
+  }
+>
+  Download Resume
+</a>
 
       </div>
     </motion.section>
