@@ -30,7 +30,7 @@ export default function Contact() {
               href="tel:+917013423739"
               className="text-gray-300 hover:text-blue-400 transition"
             >
-              +91 70134 23739
+              9063430575
             </a>
           </div>
 
