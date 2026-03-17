@@ -54,7 +54,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition"
             >
-              linkedin.com/in/santhoshi-puru
+          LinkedIn
             </a>
           </div>
 
@@ -62,12 +62,12 @@ export default function Contact() {
           <div className="flex items-center gap-4">
             <Github className="text-blue-500" />
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Santhoshipuru"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition"
             >
-              github.com/yourusername
+              Github
             </a>
           </div>
         </div>
