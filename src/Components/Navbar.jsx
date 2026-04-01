@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
 
+
 export default function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav
       className={
         darkMode
-          ? "flex justify-between items-center px-8 py-4 bg-gray-900 shadow-md transition"
-          : "flex justify-between items-center px-8 py-4 bg-gray-200 shadow-md transition"
+          ? "flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-4 bg-gray-900 shadow-md transition gap-4"
+          : "flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-4 bg-gray-200 shadow-md transition gap-4"
       }
     >
-      <h1 className="text-2xl font-bold text-blue-500">
-        Santhoshi Puru
-      </h1>
+      <img
+  src="/santhoshi.jpeg"
+  alt="Santhoshi Logo"
+ className="h-14 md:h-16 w-48 md:w-56 object-contain"
+/>
 
-      <div className="space-x-6 flex items-center">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-6 items-center text-sm md:text-base">
         <Link to="/" className="hover:text-blue-400">
           Home
         </Link>
@@ -27,10 +30,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
           Contact
         </Link>
 
-        {/* 🌙 Toggle Button */}
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="ml-4 px-3 py-1 border rounded-lg hover:scale-105 transition"
+          className="px-3 py-1 border rounded-lg hover:scale-105 transition"
         >
           {darkMode ? "☀️" : "🌙"}
         </button>

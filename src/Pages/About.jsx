@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function About() {
+export default function About({ darkMode }) {
   return (
     <motion.section
       initial={{ opacity: 0, x: -60 }}
@@ -16,9 +16,17 @@ export default function About() {
 
       {/* Introduction */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <p className="text-gray-300 text-lg leading-relaxed">
-          I'm <span className="text-white font-semibold">Santhoshi</span>, a
-          passionate React.js developer focused on building modern,
+       <p
+          
+  className={` text-lg leading-relaxed ${
+    darkMode ? "text-white" : "text-gray-500"
+  }`}
+>
+          I'm{" "}
+          <span className="font-bold text-blue-400">
+  Santhoshi
+</span>
+          , a passionate React.js developer focused on building modern,
           responsive and user-friendly web applications. I enjoy turning
           complex problems into simple, beautiful and intuitive designs.
         </p>
@@ -26,24 +34,46 @@ export default function About() {
 
       {/* Journey Section */}
       <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+        {/* Left */}
         <div>
           <h2 className="text-2xl font-semibold text-blue-400 mb-4">
             My Journey
           </h2>
-          <p className="text-gray-400 leading-relaxed">
+
+          <p
+          
+  className={`leading-relaxed ${
+    darkMode ? "text-white" : "text-gray-500"
+  }`}
+>
+          
             I started my journey in web development with a strong curiosity
             for how websites work. Over time, I developed skills in React,
-            JavaScript and modern frontend technologies. I continuously
-            improve my skills by building real-world projects and exploring
-            new tools.
+            JavaScript and modern frontend technologies.
           </p>
         </div>
 
-        <div className="bg-gray-900 p-8 rounded-xl shadow-lg">
-          <h3 className="text-xl font-semibold mb-4 text-white">
+        {/* Right Card */}
+        <div
+          className={`p-8 rounded-xl shadow-lg transition ${
+            darkMode
+              ? "bg-gray-900 border border-gray-700"
+              : "bg-gray-100"
+          }`}
+        >
+          <h3
+            className={`text-xl font-semibold mb-4 ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          >
             What I Focus On
           </h3>
-          <ul className="space-y-3 text-gray-400">
+
+          <ul
+            className={`space-y-3 ${
+              darkMode ? "text-gray-300" : "text-gray-700"
+            }`}
+          >
             <li>✔ Clean & scalable code</li>
             <li>✔ Responsive design</li>
             <li>✔ API integration</li>
@@ -53,43 +83,49 @@ export default function About() {
         </div>
       </div>
 
-      {/* Skills Section */}
+      {/* Skills */}
       <div className="mb-20">
         <h2 className="text-2xl font-semibold text-blue-400 text-center mb-8">
           Technical Skills
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            React.js
-          </span>
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            JavaScript (ES6+)
-          </span>
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            Tailwind CSS
-          </span>
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            Axios
-          </span>
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            REST APIs
-          </span>
-          <span className="bg-gray-800 px-5 py-2 rounded-full">
-            Git & GitHub
-          </span>
+          {[
+            "React.js",
+            "JavaScript",
+            "Tailwind CSS",
+            "Axios",
+            "REST APIs",
+            "Git & GitHub",
+          ].map((skill, index) => (
+            <span
+              key={index}
+              className={`px-5 py-2 rounded-full transition ${
+                darkMode
+                  ? "bg-gray-800 text-white hover:bg-gray-700"
+                  : "bg-gray-200 text-black hover:bg-gray-300"
+              }`}
+            >
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
 
-      {/* Career Goal */}
+      {/* Goal */}
       <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-2xl font-semibold text-blue-400 mb-4">
           Career Goal
         </h2>
-        <p className="text-gray-400 leading-relaxed">
+
+       <p
+          
+  className={`leading-relaxed ${
+    darkMode ? "text-white" : "text-gray-500"
+  }`}
+>
           My goal is to work in a growth-oriented company where I can
-          contribute to impactful products while continuously learning and
-          enhancing my technical expertise.
+          contribute to impactful products while continuously learning.
         </p>
       </div>
     </motion.section>

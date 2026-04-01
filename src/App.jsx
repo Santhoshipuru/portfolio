@@ -8,13 +8,13 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Projects from "./Pages/Projects";
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ darkMode }) {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
@@ -24,7 +24,7 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true); // default dark
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <Router>
@@ -36,7 +36,7 @@ function App() {
         }
       >
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <AnimatedRoutes />
+        <AnimatedRoutes darkMode={darkMode} />
       </div>
     </Router>
   );
